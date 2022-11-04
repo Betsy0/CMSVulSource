@@ -20,7 +20,7 @@ apt install php5-curl
 
 ## 漏洞信息
 
-### iseacms
+### iseacms（熊海）
 
 ```
 版本信息：1.0
@@ -153,7 +153,7 @@ and(updatexml(1,concat(0x7e,(select%20database()),0x7e),1))
 
 ![Snipaste_2022-10-12_15-22-13](images/Snipaste_2022-10-12_15-22-13.jpg)
 
-### 74cms
+### 74cms（骑士）
 
 ```
 版本信息：6.0.4
@@ -252,7 +252,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 
 
-### damicms
+### damicms（大米）
 
 ```
 版本信息：5.5.1
@@ -292,7 +292,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 
 
-### metinfo
+### metinfo（米拓）
 
 ```
 版本信息：6.0.0
@@ -360,7 +360,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 
 
-### rejucms
+### rejucms（热剧）
 
 ```
 版本信息：2.1
@@ -382,7 +382,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 
 
-### feifeicms
+### feifeicms（飞飞）
 
 ```
 版本信息：4.0.18
@@ -412,7 +412,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 
 
-### catfishcms
+### catfishcms（鲶鱼）
 
 ```
 版本信息：4.4.14
@@ -438,7 +438,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 
 
 
-### qibocms
+### qibocms（齐博）
 
 ```
 版本信息：7.0
@@ -476,7 +476,7 @@ variable=1&tpl=data/Runtime/Logs/Home/22_10_12.log  #日志文件为日期
 ' and updatexml(1,concat(0x7e,(select database()),0x7e),1)#
 ```
 
-### eyoucms
+### eyoucms（易优）
 
 ```
 版本信息：1.0.9
@@ -542,7 +542,7 @@ admin%df' or 1=1
 
 
 
-### empirecms
+### empirecms（帝国）
 
 ```
 版本信息：6.0
@@ -652,7 +652,7 @@ for i in range(1, 50):
 
 
 
-### lmxcms
+### lmxcms（梦想）
 
 ```
 版本信息：1.41
@@ -794,7 +794,7 @@ abcddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 
 ![Snipaste_2022-11-01_17-37-56.jpg](images/Snipaste_2022-11-01_17-37-56.jpg)
 
-### lfcms
+### lfcms（雷风）
 
 ```
 版本信息：3.4.0
@@ -829,3 +829,17 @@ abcddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 攻击者利用添加的账户登录
 
 ![Snipaste_2022-11-04_10-56-08](images/Snipaste_2022-11-04_10-56-08.jpg)
+
+### yunyecms（云业）
+
+```
+版本信息：2.0.1
+```
+
+#### sql注入
+
+随意注册一个账户登录，登录后在cookie处的YUNYECMS_userid字段存在sql注入
+
+![Snipaste_2022-11-04_14-55-09](images/Snipaste_2022-11-04_14-55-09.jpg)
+
+![Snipaste_2022-11-04_14-55-53](images/Snipaste_2022-11-04_14-55-53.jpg)
