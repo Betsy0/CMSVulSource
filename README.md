@@ -998,7 +998,7 @@ apk add php7-fileinfo
 
 ![image-20221121162616751](images/image-20221121162616751.png)
 
-### youdiancms
+### youdiancms（友点）
 
 ```
 版本信息：8.0
